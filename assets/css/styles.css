@@ -1,0 +1,252 @@
+:root {
+  --bg: #0b0c10;
+  --surface: #15161d;
+  --text: #f3f4f6;
+  --muted: #9ca3af;
+  --accent: #ef233c;
+  --secondary: #457b9d;
+  --border: #2d2f3a;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+
+  --radius: 0.5rem;
+  --max-width: 75rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Franklin Gothic Bold", sans-serif;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 var(--space-sm);
+  color: var(--text);
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+p {
+  margin: 0 0 var(--space-md);
+  color: var(--muted);
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 0.15rem solid var(--accent);
+  outline-offset: 0.15rem;
+}
+
+.container {
+  width: min(100% - var(--space-md) * 2, var(--max-width));
+  margin-inline: auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 4rem;
+}
+
+.logo {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--text);
+  letter-spacing: 0.05em;
+}
+
+.logo:hover {
+  color: var(--accent);
+}
+
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 1.75rem;
+  height: 0.2rem;
+  background-color: var(--text);
+  border-radius: 0.1rem;
+  transition: background-color 0.2s ease;
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.hero {
+  padding: var(--space-xl) 0;
+  text-align: center;
+  background: radial-gradient(circle at top, var(--surface), var(--bg));
+}
+
+.hero-tagline {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  max-width: 40ch;
+  margin-inline: auto;
+  margin-bottom: var(--space-lg);
+}
+
+.button {
+  display: inline-flex;
+  padding: 0.85rem 1.75rem;
+  background-color: var(--accent);
+  color: var(--text);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius);
+  border: 2px solid var(--accent);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--accent);
+}
+
+.button:focus-visible {
+  outline: 0.15rem solid var(--text);
+  outline-offset: 0.15rem;
+}
+
+.section {
+  padding: var(--space-xl) 0;
+}
+
+.section--surface {
+  background-color: var(--surface);
+  border-block: 1px solid var(--border);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.grid--cards {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  margin-top: var(--space-lg);
+}
+
+.card {
+  padding: var(--space-md);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.card h3 {
+  color: var(--accent);
+}
+
+.site-footer {
+  padding: var(--space-lg) 0;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 40rem) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 var(--space-md);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.25s ease, opacity 0.25s ease, padding 0.25s ease;
+  }
+
+  .site-nav.is-open {
+    max-height: 30rem;
+    opacity: 1;
+    padding: var(--space-md);
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+}
+
+@media (min-width: 40.01rem) {
+  .nav-toggle {
+    display: none;
+  }
+}
