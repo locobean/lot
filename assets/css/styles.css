@@ -1,11 +1,12 @@
 :root {
-  --bg: #0b0c10;
-  --surface: #15161d;
-  --text: #f3f4f6;
-  --muted: #9ca3af;
-  --accent: #ef233c;
-  --secondary: #457b9d;
-  --border: #2d2f3a;
+  --bg: #050806;
+  --surface: #0d130f;
+  --card: #121a14;
+  --text: #ffffff;
+  --muted: #c8d1cb;
+  --accent: #28e564;
+  --secondary: #4ade80;
+  --border: #223529;
 
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -107,7 +108,7 @@ a:focus-visible {
 }
 
 .site-header.is-scrolled {
-  background-color: rgba(21, 22, 29, 0.98);
+  background-color: color-mix(in srgb, var(--surface) 98%, transparent);
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.35);
 }
 
@@ -260,8 +261,19 @@ a:focus-visible {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: radial-gradient(circle at top, var(--surface), var(--bg));
+  background-image: url('../images/hero/hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   pointer-events: none;
+}
+
+.hero__bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--bg);
+  opacity: 0.6;
 }
 
 .hero__eyebrow {
@@ -305,6 +317,27 @@ a:focus-visible {
 
 .hero__actions .button {
   width: min(100%, 16rem);
+}
+
+.hero__socials {
+  margin-top: var(--space-md);
+}
+
+.hero__socials ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero__socials .socials__link {
+  min-width: 2.25rem;
+  min-height: 2.25rem;
+  font-size: 1rem;
 }
 
 .button {
@@ -385,6 +418,10 @@ a:focus-visible {
   outline-offset: 0.15rem;
 }
 
+.scroll-top i {
+  font-size: 1.75rem;
+}
+
 .section {
   padding: var(--space-xl) 0;
 }
@@ -411,7 +448,7 @@ a:focus-visible {
 
 .card {
   padding: var(--space-md);
-  background-color: var(--bg);
+  background-color: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
@@ -440,18 +477,10 @@ a:focus-visible {
   width: 100%;
   max-width: 45rem;
   margin: 0 auto var(--space-md);
-  aspect-ratio: 3 / 2;
-  background-color: var(--bg);
-  border: 1px dashed var(--border);
+  display: block;
+  height: auto;
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--muted);
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .gallery__item {
