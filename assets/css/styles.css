@@ -68,6 +68,10 @@ h3 {
   font-size: clamp(1.25rem, 5vw, 1.75rem);
 }
 
+#code-of-conduct h2 {
+  margin-bottom: clamp(1rem, 2.5vw, 1.75rem);
+}
+
 p {
   margin: 0 0 var(--space-md);
   color: var(--muted);
