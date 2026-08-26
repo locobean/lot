@@ -52,6 +52,17 @@ Then open `http://localhost:8000` in your browser.
 3. Edit `assets/js/main.js` to add or change interactive features.
 4. Save your changes and refresh the browser to see them.
 
+## Social media links
+
+Social media links are in the footer of `index.html`. They currently use placeholder URLs:
+
+- **Discord:** `https://example.com/leeontrack-discord`
+- **Facebook:** `https://example.com/leeontrack-facebook`
+- **YouTube:** `https://example.com/leeontrack-youtube`
+- **TikTok:** `https://example.com/leeontrack-tiktok`
+
+Replace these placeholder URLs with the real LeeOnTrack social media URLs. The icons are provided by [Font Awesome](https://fontawesome.com/) via a CDN link in `index.html`.
+
 ## How to deploy to GitHub Pages
 
 This site uses the repository already connected to GitHub (`https://github.com/locobean/lot.git`). To publish:
