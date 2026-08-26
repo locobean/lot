@@ -307,6 +307,92 @@ a:focus-visible {
   color: var(--muted);
 }
 
+/* Racing banner */
+.racing-banner {
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 2px solid var(--accent);
+  padding: var(--space-sm) 0;
+}
+
+.racing-banner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.racing-banner__logo {
+  display: block;
+  width: clamp(3.5rem, 10vw, 10rem);
+  height: auto;
+  flex-shrink: 0;
+}
+
+.racing-banner__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-xs);
+}
+
+.racing-banner__line {
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(1rem, 4.5vw, 2.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.racing-banner__line--green {
+  color: var(--accent);
+}
+
+.racing-banner__line--white {
+  color: var(--text);
+}
+
+.racing-banner__dot {
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .racing-banner {
+    padding: var(--space-md) 0;
+  }
+
+  .racing-banner__content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .racing-banner__text {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    text-align: left;
+  }
+
+  .racing-banner__line {
+    white-space: nowrap;
+  }
+
+  .racing-banner__dot {
+    display: inline;
+    margin-left: 0.25em;
+    color: var(--accent);
+  }
+}
+
 .hero__actions {
   display: flex;
   flex-direction: column;
