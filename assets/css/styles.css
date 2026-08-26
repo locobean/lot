@@ -540,6 +540,10 @@ a:focus-visible {
   margin-top: var(--space-lg);
 }
 
+#about .grid--cards + h3 {
+  margin-top: var(--space-lg);
+}
+
 .card {
   padding: var(--space-md);
   background-color: var(--card);
@@ -560,11 +564,14 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--muted);
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  overflow: hidden;
+}
+
+.card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .rig__media {
@@ -581,7 +588,9 @@ a:focus-visible {
   position: relative;
   aspect-ratio: 16 / 9;
   background-color: var(--surface);
-  background-image: linear-gradient(135deg, var(--surface), var(--bg));
+  background-image: url('../images/pit-stop.png');
+  background-size: cover;
+  background-position: center;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
