@@ -455,7 +455,7 @@ a:focus-visible {
 .button--secondary {
   background-color: transparent;
   color: var(--text);
-  border-color: var(--border);
+  border-color: var(--text);
 }
 
 .button--secondary:hover,
