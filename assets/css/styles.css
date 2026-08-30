@@ -302,6 +302,15 @@ a:focus-visible {
   display: none;
 }
 
+.site-nav__summary::after {
+  content: '▼';
+  display: inline-block;
+  margin-left: 0.4em;
+  font-size: 0.75em;
+  color: var(--accent);
+  vertical-align: middle;
+}
+
 .site-nav__submenu {
   list-style: none;
   margin: 0 0 0 1.25rem;
@@ -635,6 +644,38 @@ a:focus-visible {
   color: var(--accent);
 }
 
+.race-night__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.race-night__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.race-night__details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-sm) var(--space-md);
+  margin: 0;
+}
+
+.race-night__details dt {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.race-night__details dd {
+  margin: 0;
+  color: var(--text);
+}
+
 .card__media {
   margin: calc(-1 * var(--space-md)) calc(-1 * var(--space-md)) var(--space-md);
   aspect-ratio: 16 / 9;
@@ -853,6 +894,10 @@ a:focus-visible {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
   }
 
+  .race-night__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .hero__actions {
     flex-direction: row;
   }
@@ -959,22 +1004,36 @@ a:focus-visible {
     padding: 0.25rem 0;
   }
 
+  .site-nav__summary::after {
+    content: '▼';
+    position: static;
+    right: auto;
+    top: auto;
+    transform: none;
+    display: inline-block;
+    margin-left: 0.4em;
+    font-size: 0.65em;
+    color: var(--accent);
+    vertical-align: middle;
+  }
+
   .site-nav__submenu {
     position: absolute;
     top: 100%;
     left: 0;
     min-width: 12rem;
     margin: 0;
-    padding: var(--space-sm) var(--space-md);
+    padding: var(--space-md);
     background-color: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
+    gap: var(--space-xs);
   }
 
   .site-nav__submenu a {
     display: block;
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
   }
 
   .site-nav a.nav-cta {
