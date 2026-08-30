@@ -370,6 +370,36 @@ a:focus-visible {
   opacity: 0.6;
 }
 
+#join {
+  position: relative;
+  overflow: hidden;
+}
+
+#join .container {
+  position: relative;
+  z-index: 1;
+}
+
+.join__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('../images/hero/hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.join__bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--bg);
+  opacity: 0.5;
+}
+
 .hero__eyebrow {
   font-size: clamp(1rem, 3vw, 1.25rem);
   font-weight: 700;
