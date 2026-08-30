@@ -610,6 +610,7 @@ a:focus-visible {
   background-color: var(--surface);
   background-image: repeating-conic-gradient(rgba(255, 255, 255, 0.05) 0% 25%, var(--surface) 0% 50%);
   background-size: 3rem 3rem;
+  background-attachment: fixed;
   border-block: 1px solid var(--border);
 }
 
@@ -1175,6 +1176,27 @@ a:focus-visible {
   .hero {
     padding: clamp(6rem, 10vw, 9rem) 0;
   }
+}
+
+.legal-content {
+  padding: var(--space-md);
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.legal-content h2 {
+  margin-top: var(--space-md);
+  color: var(--text);
+}
+
+.legal-content ul {
+  margin: 0 0 var(--space-md);
+  padding-left: 1.25rem;
+}
+
+.legal-content li {
+  margin-bottom: var(--space-xs);
 }
 
 /* Respect reduced motion preferences */
