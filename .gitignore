@@ -1,2 +1,21 @@
+# OS files
 .DS_Store
 Thumbs.db
+
+# Logs and caches
+*.log
+.cache/
+
+# Dependencies (if a build step is ever added)
+node_modules/
+dist/
+
+# Environment and secrets
+.env
+.env.*
+!/.env.example
+
+# Editor files
+.vscode/
+.idea/
+*.swp

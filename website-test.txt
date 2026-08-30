@@ -1,0 +1,26 @@
+Act as a Principal Web Developer and QA Engineer. Perform a comprehensive code quality, performance, accessibility, and client-readiness audit on the codebase in this workspace before final client delivery.
+
+Run a thorough, step-by-step review covering the following checks:
+
+1. Code Quality & Maintenance
+- Check for unused imports, dead code, leftover console.log/print statements, and debug flags.
+- Identify hardcoded values (API keys, secrets, local URLs, stage credentials) that must be moved to environment variables (.env.example).
+- Ensure consistent code formatting, clear file organization, and clean comment documentation.
+
+2. Performance & Best Practices
+- Audit asset usage: check for unoptimized images, missing explicit image dimensions (causing cumulative layout shifts), or unnecessarily large bundles.
+- Check semantic HTML structure, SEO metadata (title, description, OpenGraph tags, favicon), and proper document structure (<header>, <main>, <footer>).
+- Ensure error handling exists for network requests, failed asset loading, or empty states.
+
+3. Responsive Design & Accessibility (a11y)
+- Inspect responsiveness across key break points (mobile, tablet, desktop).
+- Check standard accessibility requirements: semantic tags, proper heading hierarchy (H1-H6), ARIA attributes where needed, and missing image alt attributes.
+
+4. Client Readiness & Handover
+- Verify that standard boilerplate files exist and are populated: README.md with setup/build/deploy steps, .gitignore, and appropriate LICENSE or attribution comments.
+- Ensure all placeholder text ("Lorem Ipsum", "Test", temporary domain references) has been identified or flagged for content replacement.
+
+Deliverables:
+- A clear summary of critical issues (must fix before client delivery).
+- Recommended optimizations or code cleanups.
+- Direct patches or edits for any broken logic, missing metadata, or leftover debug code found during the audit.

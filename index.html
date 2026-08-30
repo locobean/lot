@@ -4,9 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="LeeOnTrack - iRacing sim racing league.">
+  <meta name="author" content="LeeOnTrack">
+  <meta property="og:title" content="LeeOnTrack | League Racing">
+  <meta property="og:description" content="LeeOnTrack - iRacing sim racing league.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leeontrack.co.uk/">
+  <meta property="og:image" content="https://leeontrack.co.uk/assets/images/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
   <title>LeeOnTrack | League Racing</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <header class="site-header">
@@ -80,7 +89,7 @@
               </a>
             </li>
             <li>
-              <a class="socials__link" href="https://example.com/leeontrack-youtube" aria-label="LeeOnTrack on YouTube" target="_blank" rel="noopener noreferrer">
+              <a class="socials__link" href="https://www.youtube.com/@LeeOnTrack" aria-label="LeeOnTrack on YouTube" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-youtube" aria-hidden="true"></i>
               </a>
             </li>
@@ -211,22 +220,24 @@
 
     <section id="rig" class="section section--surface">
       <div class="container">
-        <h2>My Rig</h2>
-        <p>Lee's sim racing rig.</p>
-        <!-- ========================================
-             MY RIG IMAGE
-             Image: assets/images/rig.png
-        ======================================== -->
-        <img class="rig__media" src="assets/images/rig.png" alt="Lee's sim racing rig">
-        <div class="accordion">
-          <details class="accordion__item">
-            <summary>Lee's sim racing rig</summary>
-            <div class="accordion__content">
-              <p>
+        <div class="rig__panel">
+          <h2>My Rig</h2>
+          <p>Lee's sim racing rig.</p>
+          <!-- ========================================
+               MY RIG IMAGE
+               Image: assets/images/rig.png
+          ======================================== -->
+          <img class="rig__media" src="assets/images/rig.png" alt="Lee's sim racing rig" width="1536" height="1024" loading="lazy" decoding="async">
+          <div class="accordion">
+            <details class="accordion__item">
+              <summary>Lee's sim racing rig</summary>
+              <div class="accordion__content">
+                <p>
 
 My rig includes a Fanatec ClubSport DD+ wheel base, GSI Formula Pro Elite V2 wheel, SimNet SP Pro pedals, Qubic QS-BT1 active belt tensioner and a high-performance gaming PC built around an RTX 5080.</p>
-            </div>
-          </details>
+              </div>
+            </details>
+          </div>
         </div>
       </div>
     </section>
@@ -234,25 +245,25 @@ My rig includes a Fanatec ClubSport DD+ wheel base, GSI Formula Pro Elite V2 whe
     <section id="league" class="section">
       <div class="container">
         <h2>Sunday Night League</h2>
-        <p>Placeholder for league overview and schedule information.</p>
+        <p>GT3, GR86 and MX-5 racing every Sunday evening. Schedules and car details are announced before each round.</p>
         <div class="grid grid--cards">
           <article id="gt3" class="card">
-            <div class="card__media" role="img" aria-label="GT3 class image placeholder">
-              <img src="assets/images/pit-stop.png" alt="">
+            <div class="card__media" role="img" aria-label="GT3 class image">
+              <img src="assets/images/pit-stop.png" alt="" width="1184" height="864" loading="lazy" decoding="async">
             </div>
             <h3>GT3</h3>
             <p>Fast racing, strategy and pit stops.</p>
           </article>
           <article id="gr86" class="card">
-            <div class="card__media" role="img" aria-label="GR86 class image placeholder">
-              <img src="assets/images/pit-stop.png" alt="">
+            <div class="card__media" role="img" aria-label="GR86 class image">
+              <img src="assets/images/pit-stop.png" alt="" width="1184" height="864" loading="lazy" decoding="async">
             </div>
             <h3>GR86</h3>
             <p>Momentum racing and close battles.</p>
           </article>
           <article id="mx5" class="card">
-            <div class="card__media" role="img" aria-label="MX-5 class image placeholder">
-              <img src="assets/images/pit-stop.png" alt="">
+            <div class="card__media" role="img" aria-label="MX-5 class image">
+              <img src="assets/images/pit-stop.png" alt="" width="1184" height="864" loading="lazy" decoding="async">
             </div>
             <h3>MX-5</h3>
             <p>Door-to-door racing and racecraft.</p>
@@ -263,34 +274,36 @@ My rig includes a Fanatec ClubSport DD+ wheel base, GSI Formula Pro Elite V2 whe
 
     <section id="race-night" class="section section--surface">
       <div class="container">
-        <h2>Race Night</h2>
-        <p>Practice • Qualifying • Race — UK evening events. Exact track and car details are announced before each event.</p>
-        <div class="race-night__grid">
-          <div class="card race-night__card">
-            <h3>Next Race</h3>
-            <dl class="race-night__details">
-              <dt>Day</dt>
-              <dd>Sunday</dd>
-              <dt>Date</dt>
-              <dd>31 August 2025</dd>
-              <dt>Time</dt>
-              <dd>20:00 BST</dd>
-              <dt>Track</dt>
-              <dd>Oran Park</dd>
-            </dl>
-          </div>
-          <div class="card race-night__card">
-            <h3>Following Race</h3>
-            <dl class="race-night__details">
-              <dt>Day</dt>
-              <dd>Sunday</dd>
-              <dt>Date</dt>
-              <dd>7 September 2025</dd>
-              <dt>Time</dt>
-              <dd>20:00 BST</dd>
-              <dt>Track</dt>
-              <dd>Okayama</dd>
-            </dl>
+        <div class="race-night__panel">
+          <h2>Race Night</h2>
+          <p>Practice • Qualifying • Race — UK evening events. Exact track and car details are announced before each event.</p>
+          <div class="race-night__grid">
+            <div class="card race-night__card">
+              <h3>Next Race</h3>
+              <dl class="race-night__details">
+                <dt>Day</dt>
+                <dd>Sunday</dd>
+                <dt>Date</dt>
+                <dd>31 August 2025</dd>
+                <dt>Time</dt>
+                <dd>20:00 BST</dd>
+                <dt>Track</dt>
+                <dd>Oran Park</dd>
+              </dl>
+            </div>
+            <div class="card race-night__card">
+              <h3>Following Race</h3>
+              <dl class="race-night__details">
+                <dt>Day</dt>
+                <dd>Sunday</dd>
+                <dt>Date</dt>
+                <dd>7 September 2025</dd>
+                <dt>Time</dt>
+                <dd>20:00 BST</dd>
+                <dt>Track</dt>
+                <dd>Okayama</dd>
+              </dl>
+            </div>
           </div>
         </div>
       </div>
@@ -302,42 +315,42 @@ My rig includes a Fanatec ClubSport DD+ wheel base, GSI Formula Pro Elite V2 whe
         <p>Racing Action!</p>
         <div class="grid grid--gallery">
           <button class="gallery__card" type="button" data-title="Race Screenshot 1" data-desc="Close battle at Oran Park." data-src="assets/images/pit-stop.png" aria-haspopup="dialog">
-            <span class="gallery__media" role="img" aria-label="Race screenshot 1 placeholder" style="background-image: url('assets/images/pit-stop.png');"></span>
+            <span class="gallery__media" role="img" aria-label="Race screenshot 1" style="background-image: url('assets/images/pit-stop.png');"></span>
             <span class="gallery__content">
               <span class="gallery__title">Race Screenshot 1</span>
               <span class="gallery__desc">Close battle at Oran Park.</span>
             </span>
           </button>
           <button class="gallery__card" type="button" data-title="Race Screenshot 2" data-desc="Qualifying lap in the MX-5." data-src="assets/images/pit-stop.png" aria-haspopup="dialog">
-            <span class="gallery__media" role="img" aria-label="Race screenshot 2 placeholder" style="background-image: url('assets/images/pit-stop.png');"></span>
+            <span class="gallery__media" role="img" aria-label="Race screenshot 2" style="background-image: url('assets/images/pit-stop.png');"></span>
             <span class="gallery__content">
               <span class="gallery__title">Race Screenshot 2</span>
               <span class="gallery__desc">Qualifying lap in the MX-5.</span>
             </span>
           </button>
           <button class="gallery__card" type="button" data-title="Race Screenshot 3" data-desc="Side-by-side into turn one." data-src="assets/images/pit-stop.png" aria-haspopup="dialog">
-            <span class="gallery__media" role="img" aria-label="Race screenshot 3 placeholder" style="background-image: url('assets/images/pit-stop.png');"></span>
+            <span class="gallery__media" role="img" aria-label="Race screenshot 3" style="background-image: url('assets/images/pit-stop.png');"></span>
             <span class="gallery__content">
               <span class="gallery__title">Race Screenshot 3</span>
               <span class="gallery__desc">Side-by-side into turn one.</span>
             </span>
           </button>
           <button class="gallery__card" type="button" data-title="Race Screenshot 4" data-desc="Evening race under the lights." data-src="assets/images/pit-stop.png" aria-haspopup="dialog">
-            <span class="gallery__media" role="img" aria-label="Race screenshot 4 placeholder" style="background-image: url('assets/images/pit-stop.png');"></span>
+            <span class="gallery__media" role="img" aria-label="Race screenshot 4" style="background-image: url('assets/images/pit-stop.png');"></span>
             <span class="gallery__content">
               <span class="gallery__title">Race Screenshot 4</span>
               <span class="gallery__desc">Evening race under the lights.</span>
             </span>
           </button>
           <button class="gallery__card" type="button" data-title="Race Screenshot 5" data-desc="Pit stop strategy in action." data-src="assets/images/pit-stop.png" aria-haspopup="dialog">
-            <span class="gallery__media" role="img" aria-label="Race screenshot 5 placeholder" style="background-image: url('assets/images/pit-stop.png');"></span>
+            <span class="gallery__media" role="img" aria-label="Race screenshot 5" style="background-image: url('assets/images/pit-stop.png');"></span>
             <span class="gallery__content">
               <span class="gallery__title">Race Screenshot 5</span>
               <span class="gallery__desc">Pit stop strategy in action.</span>
             </span>
           </button>
           <button class="gallery__card" type="button" data-title="Race Screenshot 6" data-desc="Podium celebration shot." data-src="assets/images/pit-stop.png" aria-haspopup="dialog">
-            <span class="gallery__media" role="img" aria-label="Race screenshot 6 placeholder" style="background-image: url('assets/images/pit-stop.png');"></span>
+            <span class="gallery__media" role="img" aria-label="Race screenshot 6" style="background-image: url('assets/images/pit-stop.png');"></span>
             <span class="gallery__content">
               <span class="gallery__title">Race Screenshot 6</span>
               <span class="gallery__desc">Podium celebration shot.</span>
@@ -349,12 +362,14 @@ My rig includes a Fanatec ClubSport DD+ wheel base, GSI Formula Pro Elite V2 whe
 
     <section id="code-of-conduct" class="section section--surface">
       <div class="container">
-        <h2>Code of Conduct</h2>
-        <p>LeeOnTrack League Racing</p>
-        <p>Driver Code of Conduct</p>
-        <p>Our league is about clean, competitive and enjoyable racing.</p>
-        <p>We all make mistakes, and accidents will happen. What we expect from every driver is respect, common sense and fair racing.</p>
-        <p>By taking part in a LeeOnTrack League race, drivers agree to follow this Racing Code.</p>
+        <div class="code-of-conduct__intro">
+          <h2>Code of Conduct</h2>
+          <p>LeeOnTrack League Racing</p>
+          <p>Driver Code of Conduct</p>
+          <p>Our league is about clean, competitive and enjoyable racing.</p>
+          <p>We all make mistakes, and accidents will happen. What we expect from every driver is respect, common sense and fair racing.</p>
+          <p>By taking part in a LeeOnTrack League race, drivers agree to follow this Racing Code.</p>
+        </div>
         <div class="accordion">
           <details class="accordion__item">
             <summary>General Driving Standards</summary>
@@ -598,7 +613,7 @@ My rig includes a Fanatec ClubSport DD+ wheel base, GSI Formula Pro Elite V2 whe
       <div class="join__bg" role="img" aria-label="" aria-hidden="true"></div>
       <div class="container container--narrow">
         <h2>Join Lee<span class="on-red">OnTrack</span></h2>
-        <p>Placeholder for the application process. Racers will be able to apply via an external form.</p>
+        <p>Ready to race? Apply through the form and we'll get you on the grid for the next round.</p>
         <a class="button" href="https://www.leeontrack.co.uk/application.html">Get on the Grid</a>
       </div>
     </section>
@@ -627,7 +642,7 @@ My rig includes a Fanatec ClubSport DD+ wheel base, GSI Formula Pro Elite V2 whe
           <ul>
             <li><a class="socials__link" href="https://discord.gg/leeontrack" aria-label="LeeOnTrack on Discord" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord" aria-hidden="true"></i></a></li>
             <li><a class="socials__link" href="https://www.facebook.com/LeeOnTrack" aria-label="LeeOnTrack on Facebook" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
-            <li><a class="socials__link" href="https://example.com/leeontrack-youtube" aria-label="LeeOnTrack on YouTube" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+            <li><a class="socials__link" href="https://www.youtube.com/@LeeOnTrack" aria-label="LeeOnTrack on YouTube" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
             <li><a class="socials__link" href="https://www.tiktok.com/@LeeOnTrack" aria-label="LeeOnTrack on TikTok" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a></li>
             <li><a class="socials__link" href="mailto:leeontrack5@gmail.com" aria-label="Email LeeOnTrack"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></li>
           </ul>

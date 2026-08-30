@@ -223,7 +223,7 @@ a:focus-visible {
   min-height: 2.75rem;
   padding: 0.5rem 1.25rem;
   background-color: var(--accent);
-  color: var(--text);
+  color: var(--bg);
   border: 2px solid var(--accent);
   border-radius: var(--radius);
   font-weight: 700;
@@ -262,6 +262,10 @@ a:focus-visible {
   letter-spacing: 0.05em;
   line-height: 1.2;
   color: var(--text);
+  background-color: var(--surface);
+  background-image: repeating-conic-gradient(rgba(255, 255, 255, 0.05) 0% 25%, var(--surface) 0% 50%);
+  background-size: 1.5rem 1.5rem;
+  background-attachment: fixed;
   border-top: 1px solid var(--border);
 }
 
@@ -557,7 +561,7 @@ a:focus-visible {
   min-height: 2.75rem;
   padding: 0.85rem 1.75rem;
   background-color: var(--accent);
-  color: var(--text);
+  color: var(--bg);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -706,6 +710,17 @@ a:focus-visible {
   grid-template-columns: auto 1fr;
   gap: var(--space-sm) var(--space-md);
   margin: 0;
+}
+
+.race-night__panel {
+  padding: var(--space-md);
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.race-night__panel .race-night__card {
+  background-color: var(--surface);
 }
 
 .race-night__details dt {
@@ -1092,6 +1107,9 @@ a:focus-visible {
     align-items: center;
     min-height: 3.5rem;
     background-color: var(--surface);
+    background-image: repeating-conic-gradient(rgba(255, 255, 255, 0.05) 0% 25%, var(--surface) 0% 50%);
+    background-size: 1.5rem 1.5rem;
+    background-attachment: fixed;
     border-bottom: 1px solid var(--border);
     padding: var(--space-sm) 0;
   }
@@ -1229,6 +1247,19 @@ a:focus-visible {
   margin-bottom: var(--space-xs);
 }
 
+.code-of-conduct__intro,
+.rig__panel {
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.rig__panel .rig__media {
+  margin: var(--space-md) 0;
+}
+
 /* Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -1245,5 +1276,12 @@ a:focus-visible {
   a,
   .button {
     transition: none;
+  }
+
+  .section--surface,
+  .join__bg,
+  .next-race-banner--desktop,
+  .next-race-message {
+    background-attachment: scroll;
   }
 }

@@ -19,12 +19,14 @@ No frameworks, build tools, or server-side code are used. This makes the site ea
 ```text
 lot/
 ├── index.html        # Main page
+├── privacy.html      # Privacy policy
+├── terms.html        # Terms and conditions
 ├── assets/
 │   ├── css/
 │   │   └── styles.css    # Styling and design system
 │   ├── js/
 │   │   └── main.js       # Small interactive features
-│   ├── images/           # Images and photos
+│   ├── images/           # Images, logos and favicon
 │   └── icons/            # Icons
 ├── .gitignore        # Files to ignore
 └── README.md         # This file
@@ -52,14 +54,36 @@ Then open `http://localhost:8000` in your browser.
 3. Edit `assets/js/main.js` to add or change interactive features.
 4. Save your changes and refresh the browser to see them.
 
+## How to update common content
+
+### Next race banner
+
+The next race message appears in two places in `index.html`:
+
+- **Desktop banner** below the header: edit the `.next-race-banner__date` `<span>` (around the `.next-race-banner--desktop` section).
+- **Mobile header** message: edit the `.next-race-message__date` `<span>` inside the `<header>`.
+
+### Race night cards
+
+In `index.html`, find the `#race-night` section. Update the `dd` values inside the `.race-night__details` lists for the **Next Race** and **Following Race** cards.
+
+### Gallery images
+
+Each gallery item in `index.html` is a `<button class="gallery__card">`. For each image:
+
+1. Replace the `data-src` value with the path to the full-size image.
+2. Update the `style="background-image: url('...');"` on `.gallery__media` to the same image path.
+3. Update `data-title` and `data-desc` for the lightbox title and description.
+4. Update the visible `.gallery__title` and `.gallery__desc` `<span>` text.
+
 ## Social media links
 
-Social media links are in the footer of `index.html`. They currently use placeholder URLs:
+Social media links are in the footer and hero of `index.html`. They currently use the following placeholder URLs:
 
-- **Discord:** `https://example.com/leeontrack-discord`
-- **Facebook:** `https://example.com/leeontrack-facebook`
-- **YouTube:** `https://example.com/leeontrack-youtube`
-- **TikTok:** `https://example.com/leeontrack-tiktok`
+- **Discord:** `https://discord.gg/leeontrack`
+- **Facebook:** `https://www.facebook.com/LeeOnTrack`
+- **YouTube:** `https://www.youtube.com/@LeeOnTrack`
+- **TikTok:** `https://www.tiktok.com/@LeeOnTrack`
 
 Replace these placeholder URLs with the real LeeOnTrack social media URLs. The icons are provided by [Font Awesome](https://fontawesome.com/) via a CDN link in `index.html`.
 
