@@ -105,4 +105,64 @@
       }
     });
   }
+
+  const consentBanner = document.getElementById('consent-banner');
+  const consentKey = 'lot-consent';
+  let consent = null;
+
+  function applyConsent(choice) {
+    document.querySelectorAll('[data-consent="analytics"]').forEach(function (el) {
+      if (choice === 'accept') {
+        if (el.dataset.src) {
+          el.src = el.dataset.src;
+          el.removeAttribute('data-src');
+        }
+        if (el.dataset.href) {
+          el.href = el.dataset.href;
+          el.removeAttribute('data-href');
+        }
+        if (el.type === 'text/plain') {
+          el.type = 'text/javascript';
+        }
+      }
+      el.hidden = choice !== 'accept';
+    });
+  }
+
+  try {
+    consent = localStorage.getItem(consentKey);
+  } catch (e) {
+    consent = null;
+  }
+
+  if (consent) {
+    applyConsent(consent);
+  }
+
+  if (consentBanner) {
+    if (!consent) {
+      consentBanner.hidden = false;
+      window.setTimeout(function () {
+        consentBanner.classList.add('is-visible');
+      }, 50);
+    }
+
+    consentBanner.addEventListener('click', function (event) {
+      const button = event.target.closest('[data-consent]');
+      if (!button) {
+        return;
+      }
+      const choice = button.dataset.consent;
+      try {
+        localStorage.setItem(consentKey, choice);
+      } catch (e) {
+        // Storage may be unavailable in private browsing.
+      }
+      applyConsent(choice);
+      consentBanner.classList.remove('is-visible');
+      window.setTimeout(function () {
+        consentBanner.hidden = true;
+      }, 250);
+    });
+  }
 })();
