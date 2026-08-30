@@ -12,6 +12,10 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="#home">Lee<span class="on-red">ON</span>Track</a>
+      <p class="next-race-message">
+        <span class="next-race-message__label">Next Race:</span>
+        <span class="next-race-message__date">Sunday 31 August 2025, 20:00 BST</span>
+      </p>
       <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
         <span class="nav-toggle-bar" aria-hidden="true"></span>
         <span class="nav-toggle-bar" aria-hidden="true"></span>
@@ -21,15 +25,35 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#league">League</a></li>
+          <li class="site-nav__item--submenu">
+            <details class="site-nav__details">
+              <summary class="site-nav__summary">League</summary>
+              <ul class="site-nav__submenu">
+                <li><a href="#league">League Overview</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#code-of-conduct">Code of Conduct</a></li>
+              </ul>
+            </details>
+          </li>
           <li><a href="#race-night">Race Night</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#code-of-conduct">Code of Conduct</a></li>
           <li><a class="nav-cta" href="https://www.leeontrack.co.uk/application.html">Join</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
+  <!-- ========================================
+       NEXT RACE BANNER (DESKTOP)
+       EDIT DATE / TIME HERE
+  ======================================== -->
+  <section class="next-race-banner next-race-banner--desktop" aria-label="Next race">
+    <div class="container">
+      <p class="next-race-banner__text">
+        <span class="next-race-banner__label">Next Race:</span>
+        <span class="next-race-banner__date">Sunday 31 August 2025, 20:00 BST</span>
+      </p>
+    </div>
+  </section>
 
   <main id="home">
     <section class="hero" aria-label="Welcome">

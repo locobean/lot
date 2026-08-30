@@ -122,6 +122,7 @@ a:focus-visible {
 
 .header-inner {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   min-height: 4rem;
@@ -193,7 +194,7 @@ a:focus-visible {
 }
 
 .site-nav.is-open {
-  max-height: 30rem;
+  max-height: 45rem;
   opacity: 1;
   visibility: visible;
   padding: var(--space-md);
@@ -250,6 +251,84 @@ a:focus-visible {
   width: 100%;
   margin-top: var(--space-sm);
   padding: 0.5rem 1.25rem;
+}
+
+.next-race-message {
+  order: 3;
+  width: 100%;
+  margin: 0;
+  padding: var(--space-sm) 0;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  color: var(--text);
+  border-top: 1px solid var(--border);
+}
+
+.next-race-message__label {
+  color: var(--text);
+}
+
+.next-race-message__date {
+  color: var(--accent);
+}
+
+.next-race-banner--desktop {
+  display: none;
+}
+
+.site-nav__item--submenu {
+  width: 100%;
+}
+
+.site-nav__details {
+  width: 100%;
+}
+
+.site-nav__summary {
+  list-style: none;
+  cursor: pointer;
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 0;
+}
+
+.site-nav__summary::-webkit-details-marker {
+  display: none;
+}
+
+.site-nav__submenu {
+  list-style: none;
+  margin: 0 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.site-nav__submenu a {
+  color: var(--muted);
+  padding: 0.5rem 0;
+}
+
+.site-nav__submenu a:hover,
+.site-nav__submenu a:focus-visible {
+  color: var(--accent);
+}
+
+.site-nav__summary:hover,
+.site-nav__summary:focus-visible {
+  color: var(--accent);
+}
+
+.site-nav__summary:focus-visible {
+  outline: 0.15rem solid var(--accent);
+  outline-offset: 0.15rem;
 }
 
 .hero {
@@ -797,11 +876,41 @@ a:focus-visible {
   }
 
   .header-inner {
+    flex-wrap: nowrap;
     min-height: 5rem;
   }
 
   .logo {
     font-size: 1.75rem;
+  }
+
+  .next-race-message {
+    display: none;
+  }
+
+  .next-race-banner--desktop {
+    display: block;
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: var(--space-sm) 0;
+  }
+
+  .next-race-banner__text {
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    color: var(--text);
+  }
+
+  .next-race-banner__label {
+    color: var(--text);
+  }
+
+  .next-race-banner__date {
+    color: var(--accent);
   }
 
   .nav-toggle {
@@ -834,6 +943,38 @@ a:focus-visible {
 
   .site-nav a {
     padding: 0.25rem 0;
+  }
+
+  .site-nav__item--submenu,
+  .site-nav__details {
+    width: auto;
+  }
+
+  .site-nav__details {
+    position: relative;
+  }
+
+  .site-nav__summary {
+    display: inline-block;
+    padding: 0.25rem 0;
+  }
+
+  .site-nav__submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 12rem;
+    margin: 0;
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
+  }
+
+  .site-nav__submenu a {
+    display: block;
+    padding: 0.5rem 0;
   }
 
   .site-nav a.nav-cta {
