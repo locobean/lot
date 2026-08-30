@@ -50,7 +50,6 @@ h2,
 h3 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Franklin Gothic Bold", sans-serif;
   line-height: 1.1;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
   margin: 0 0 var(--space-sm);
   color: var(--text);
@@ -131,7 +130,6 @@ a:focus-visible {
 .logo {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 1.5rem;
-  text-transform: uppercase;
   color: var(--text);
   letter-spacing: 0.05em;
   display: inline-flex;
@@ -610,6 +608,8 @@ a:focus-visible {
 
 .section--surface {
   background-color: var(--surface);
+  background-image: repeating-conic-gradient(rgba(255, 255, 255, 0.05) 0% 25%, var(--surface) 0% 50%);
+  background-size: 3rem 3rem;
   border-block: 1px solid var(--border);
 }
 
@@ -633,6 +633,7 @@ a:focus-visible {
 }
 
 .card {
+  position: relative;
   padding: var(--space-md);
   background-color: var(--card);
   border: 1px solid var(--border);
@@ -642,6 +643,18 @@ a:focus-visible {
 
 .card h3 {
   color: var(--accent);
+}
+
+.card__logo {
+  position: absolute;
+  right: var(--space-md);
+  bottom: var(--space-md);
+  width: 4rem;
+  height: auto;
+}
+
+#about .card {
+  padding-bottom: calc(var(--space-md) + 4.5rem);
 }
 
 .race-night__grid {
@@ -834,7 +847,6 @@ a:focus-visible {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Franklin Gothic Bold", sans-serif;
   font-size: 1.5rem;
   color: var(--text);
-  text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
