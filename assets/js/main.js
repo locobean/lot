@@ -72,4 +72,37 @@
       window.scrollTo({ top: 0, behavior: behavior });
     });
   }
+
+  const galleryCards = document.querySelectorAll('.gallery__card');
+  const galleryModal = document.getElementById('gallery-modal');
+
+  if (galleryModal && galleryCards.length) {
+    const modalImage = galleryModal.querySelector('.gallery-modal__image');
+    const modalTitle = galleryModal.querySelector('.gallery-modal__title');
+    const modalDesc = galleryModal.querySelector('.gallery-modal__desc');
+
+    galleryCards.forEach(function (card) {
+      card.addEventListener('click', function () {
+        if (modalImage) {
+          modalImage.src = card.dataset.src || '';
+          modalImage.alt = card.dataset.title || '';
+        }
+        if (modalTitle) modalTitle.textContent = card.dataset.title || '';
+        if (modalDesc) modalDesc.textContent = card.dataset.desc || '';
+        galleryModal.showModal();
+      });
+    });
+
+    galleryModal.addEventListener('click', function (event) {
+      const rect = galleryModal.getBoundingClientRect();
+      if (
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+      ) {
+        galleryModal.close();
+      }
+    });
+  }
 })();

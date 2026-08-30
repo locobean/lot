@@ -619,7 +619,7 @@ a:focus-visible {
 }
 
 .grid--gallery {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
   margin-top: var(--space-lg);
 }
 
@@ -704,16 +704,119 @@ a:focus-visible {
   border-radius: var(--radius);
 }
 
-.gallery__item {
+.gallery__card {
   position: relative;
+  display: grid;
   aspect-ratio: 16 / 9;
-  background-color: var(--surface);
-  background-image: url('../images/pit-stop.png');
-  background-size: cover;
-  background-position: center;
+  padding: 0;
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  background-color: var(--surface);
+  cursor: pointer;
   overflow: hidden;
+  text-align: left;
+}
+
+.gallery__media {
+  position: absolute;
+  inset: 0;
+  background-color: var(--surface);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.gallery__card:hover .gallery__media,
+.gallery__card:focus-visible .gallery__media {
+  transform: scale(1.05);
+}
+
+.gallery__content {
+  position: relative;
+  z-index: 1;
+  align-self: end;
+  padding: var(--space-sm);
+  background: linear-gradient(transparent, rgba(5, 8, 6, 0.85));
+}
+
+.gallery__title {
+  display: block;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.gallery__desc {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.gallery__card:focus-visible {
+  outline: 0.15rem solid var(--accent);
+  outline-offset: 0.15rem;
+}
+
+.gallery-modal {
+  width: min(90vw, 60rem);
+  max-height: 90vh;
+  padding: var(--space-md);
+  background-color: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.gallery-modal::backdrop {
+  background-color: rgba(5, 8, 6, 0.9);
+}
+
+.gallery-modal__close-form {
+  margin: 0 0 var(--space-sm);
+  text-align: right;
+}
+
+.gallery-modal__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.gallery-modal__close:hover,
+.gallery-modal__close:focus-visible {
+  background-color: var(--surface);
+  color: var(--accent);
+}
+
+.gallery-modal__image {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+.gallery-modal__title {
+  display: block;
+  margin-top: var(--space-md);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.gallery-modal__desc {
+  display: block;
+  margin-top: var(--space-xs);
+  color: var(--muted);
 }
 
 .site-footer {
@@ -743,6 +846,14 @@ a:focus-visible {
 .footer__legal {
   font-size: 0.875rem;
   color: var(--muted);
+}
+
+.footer__logo {
+  display: block;
+  width: 8rem;
+  max-width: 100%;
+  height: auto;
+  margin-top: var(--space-sm);
 }
 
 .footer__nav ul,
@@ -934,13 +1045,16 @@ a:focus-visible {
   }
 
   .next-race-banner--desktop {
-    display: block;
+    display: flex;
+    align-items: center;
+    min-height: 3.5rem;
     background-color: var(--surface);
     border-bottom: 1px solid var(--border);
     padding: var(--space-sm) 0;
   }
 
   .next-race-banner__text {
+    width: 100%;
     margin: 0;
     text-align: center;
     font-weight: 700;
