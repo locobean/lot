@@ -998,9 +998,9 @@ a:focus-visible {
 }
 
 .accordion__item summary {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: var(--space-sm);
   padding: var(--space-md);
   font-weight: 700;
