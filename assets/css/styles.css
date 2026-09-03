@@ -1341,7 +1341,7 @@ a:focus-visible {
 }
 
 .rig__panel .rig__media {
-  margin: var(--space-md) 0;
+  margin: var(--space-md) auto;
 }
 
 .consent-banner {
