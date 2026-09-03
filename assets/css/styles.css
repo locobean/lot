@@ -554,6 +554,10 @@ a:focus-visible {
   font-size: 1rem;
 }
 
+.hero__desktop-logo {
+  display: none;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -1217,12 +1221,86 @@ a:focus-visible {
     width: auto;
     margin-top: 0;
   }
+
+  /* Desktop hero uses the full designed hero image */
+  .hero {
+    position: relative;
+    padding: 0;
+    min-height: clamp(34rem, 85vh, 52rem);
+  }
+
+  .hero .container {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    text-align: left;
+  }
+
+  .hero h1,
+  .hero .hero__eyebrow,
+  .hero .hero-tagline {
+    display: none;
+  }
+
+  .hero__desktop-logo {
+    display: block;
+    position: absolute;
+    top: 4%;
+    right: 5%;
+    left: auto;
+    width: clamp(6rem, 12%, 12rem);
+    height: auto;
+  }
+
+  .hero__actions {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    left: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    gap: var(--space-md);
+    width: auto;
+  }
+
+  .hero__actions .button {
+    width: auto;
+    min-width: 10rem;
+    white-space: nowrap;
+  }
+
+  .hero__socials {
+    position: absolute;
+    bottom: 3%;
+    right: 5%;
+    left: auto;
+    width: auto;
+    margin: 0;
+  }
+
+  .hero__socials ul {
+    justify-content: flex-end;
+  }
+
+  .hero__bg {
+    background-image: url('../images/hero/hero_desk.png');
+    background-position: top center;
+  }
+
+  .hero__bg::before {
+    opacity: 0;
+  }
 }
 
 /* Large desktop */
 @media (min-width: 90rem) {
   .hero {
-    padding: clamp(6rem, 10vw, 9rem) 0;
+    min-height: clamp(38rem, 85vh, 54rem);
   }
 }
 
