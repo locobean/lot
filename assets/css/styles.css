@@ -933,8 +933,7 @@ a:focus-visible {
 
 .footer__logo {
   display: block;
-  width: 8rem;
-  max-width: 100%;
+  width: min(100%, 13rem);
   height: auto;
   margin-top: var(--space-sm);
 }
