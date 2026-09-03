@@ -554,10 +554,6 @@ a:focus-visible {
   font-size: 1rem;
 }
 
-.hero__desktop-logo {
-  display: none;
-}
-
 .button {
   display: inline-flex;
   align-items: center;
@@ -1243,16 +1239,6 @@ a:focus-visible {
   .hero .hero__eyebrow,
   .hero .hero-tagline {
     display: none;
-  }
-
-  .hero__desktop-logo {
-    display: block;
-    position: absolute;
-    top: 4%;
-    right: 5%;
-    left: auto;
-    width: clamp(6rem, 12%, 12rem);
-    height: auto;
   }
 
   .hero__actions {
