@@ -1243,11 +1243,12 @@ a:focus-visible {
     margin-top: 0;
   }
 
-  /* Desktop hero uses the full designed hero image */
+  /* Desktop hero uses the full designed hero image, scaled to its own ratio */
   .hero {
     position: relative;
     padding: 0;
-    min-height: clamp(34rem, 85vh, 52rem);
+    min-height: 0;
+    aspect-ratio: 1532 / 682;
   }
 
   .hero .container {
@@ -1268,7 +1269,7 @@ a:focus-visible {
 
   .hero__actions {
     position: absolute;
-    bottom: 10%;
+    bottom: calc(var(--space-md) + 2.25rem + var(--space-xs));
     right: 5%;
     left: auto;
     display: flex;
@@ -1287,7 +1288,7 @@ a:focus-visible {
 
   .hero__socials {
     position: absolute;
-    bottom: 3%;
+    bottom: var(--space-md);
     right: 5%;
     left: auto;
     width: auto;
@@ -1300,18 +1301,12 @@ a:focus-visible {
 
   .hero__bg {
     background-image: url('../images/hero/hero_desk.png');
-    background-position: top center;
+    background-position: center;
+    background-size: 100% 100%;
   }
 
   .hero__bg::before {
     opacity: 0;
-  }
-}
-
-/* Large desktop */
-@media (min-width: 90rem) {
-  .hero {
-    min-height: clamp(38rem, 85vh, 54rem);
   }
 }
 
